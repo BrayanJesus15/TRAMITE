@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal de Trámites SAT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004085;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e9ecef;
+      text-align: center;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #004085;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 750px;
+      margin: 30px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    section.info, section.help {
+      background-color: #e9ecef;
+      padding: 15px;
+      margin-top: 30px;
+      border-left: 5px solid #007bff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SAT - Portal de Trámites</h1>
+</header>
+
+<nav>
+  <a href="#descripcion">Descripción</a>
+  <a href="#tramite">Iniciar Trámite</a>
+  <a href="#ayuda">Materiales de Ayuda</a>
+</nav>
+
+<main id="descripcion">
+  <h2>¿Qué es la Constancia de Situación Fiscal?</h2>
+  <p>Es un documento oficial emitido por el SAT que contiene información clave sobre tu situación fiscal, como tu RFC, nombre completo, domicilio fiscal, régimen tributario, entre otros. Es indispensable para trámites como facturación, altas patronales o contratos laborales.</p>
+
+  <h3>Requisitos para obtenerla:</h3>
+  <ul>
+    <li>Tener RFC vigente.</li>
+    <li>CURP válida.</li>
+    <li>Correo electrónico personal.</li>
+    <li>Teléfono de contacto activo.</li>
+  </ul>
+</main>
+
+<main id="tramite">
+  <h2>Ejemplo de como Solicitar tu Constancia</h2>
+  <form action="/enviar-constancia" method="POST">
+    <label for="rfc">RFC (Registro Federal de Contribuyentes):</label>
+    <input type="text" id="rfc" name="rfc" placeholder="Ej. ABC123456789" required>
+
+    <label for="curp">CURP:</label>
+    <input type="text" id="curp" name="curp" placeholder="Ej. CURP123456HDFRNS09" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" placeholder="Ej. ejemplo@correo.com" required>
+
+    <label for="telefono">Teléfono de contacto:</label>
+    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 5551234567" required>
+
+    <button type="submit">Solicitar Constancia</button>
+  </form>
+
+  <section class="info">
+    <h3>¿No conoces tu CURP?</h3>
+    <p>Puedes consultar o descargar tu CURP oficial directamente desde el portal del gobierno mexicano:</p>
+    <p><a href="https://www.gob.mx/curp/" target="_blank">https://www.gob.mx/curp/</a></p>
+    <p>Solo necesitas tu nombre completo, fecha de nacimiento, sexo y entidad de nacimiento.</p>
+  </section>
+</main>
+
+<main id="ayuda">
+  <section class="help">
+    <h2>Materiales de Ayuda</h2>
+
+    <h3>Preguntas Frecuentes</h3>
+    <ul>
+      <li>¿Qué hago si no tengo RFC? <br> Puedes darte de alta en el portal del SAT con tu CURP.</li>
+      <li>¿Cuánto tarda en generarse la constancia? <br> Es inmediata si los datos son correctos.</li>
+      <li>¿Puedo sacar la constancia sin contraseña SAT? <br> Sí, si tienes RFC y CURP.</li>
+    </ul>
+  </section>
+
+  <section class="help">
+    <h3>Tutoriales Útiles</h3>
+    <ul>
+      <li><a href="https://www.youtube.com/watch?v=ejemplo1" target="_blank">¿Cómo consultar mi RFC en línea?</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ejemplo2" target="_blank">Cómo generar la Constancia de Situación Fiscal paso a paso</a></li>
+      <li><a href="https://www.youtube.com/watch?v=ejemplo3" target="_blank">Recuperar tu contraseña del SAT</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Portal de Trámites SAT &copy; 2025 | Este sitio es un ejemplo educativo.
+</footer>
+
+</body>
+</html>
+
+
+<main id="cuestionario">
+  <h2>Cuestionario de Satisfacción</h2>
+  <p>Tu opinión es muy importante para mejorar nuestros servicios. Por favor, responde las siguientes preguntas:</p>
+
+  <form action="/enviar-cuestionario" method="POST">
+    <label for="nombre_usuario">Nombre (opcional):</label>
+    <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Tu nombre">
+
+    <label for="satisfaccion">¿Qué tan satisfecho estás con este portal?</label>
+    <select id="satisfaccion" name="satisfaccion" required>
+      <option value="">Selecciona una opción</option>
+      <option value="muy_satisfecho">Muy satisfecho</option>
+      <option value="satisfecho">Satisfecho</option>
+      <option value="neutral">Neutral</option>
+      <option value="insatisfecho">Insatisfecho</option>
+      <option value="muy_insatisfecho">Muy insatisfecho</option>
+    </select>
+
+    <label for="mejoras">¿Qué mejorarías del sitio?</label>
+    <textarea id="mejoras" name="mejoras" placeholder="Escribe tus sugerencias aquí..." rows="4"></textarea>
+
+    <label for="recomendacion">¿Recomendarías este portal a otras personas?</label>
+    <select id="recomendacion" name="recomendacion" required>
+      <option value="">Selecciona una opción</option>
+      <option value="si">Sí</option>
+      <option value="no">No</option>
+    </select>
+
+    <button type="submit">Enviar Respuestas</button>
+  </form>
+</main>
